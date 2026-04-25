@@ -41,8 +41,27 @@ body { font-family: 'Segoe UI', sans-serif; background: #f8fbff; color: #333; }
 .status-val { font-size: 18px; font-weight: bold; margin-top: 5px; }
 
 /* Button Fixes */
-.actions { display: flex; justify-content: flex-end; gap: 12px; }
-button { padding: 10px 25px; border-radius: 12px; cursor: pointer; font-weight: bold; transition: 0.2s; }
+
+.actions { 
+  display: flex; 
+  justify-content: flex-end; 
+  gap: 12px;
+  flex-wrap: wrap; /* Prevents buttons from squishing on smaller screens */
+  align-items: center; 
+}
+
+button { 
+  all: unset; /* Clears default browser button styling */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 25px; 
+  border-radius: 12px; 
+  cursor: pointer; 
+  font-weight: bold; 
+  transition: 0.2s;
+  box-sizing: border-box; /* Ensures padding doesn't increase button size */
+}
 .btn-reject { background: white; border: 1px solid #ef4444; color: #ef4444; }
 .btn-accept { background: #52c41a; border: none; color: white; }
 
