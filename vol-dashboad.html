@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SevaLink - Volunteer Dashboard</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="vol-dashboad-style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="ph-bold ph-hand-heart"></i>
+                <span>SevaLink</span>
+            </div>
+            <nav>
+                <button class="nav-item active"><i class="ph ph-squares-four"></i> Home</button>
+                <a href="vol-opp.html" style="text-decoration: none;">
+    <button class="nav-item">
+        <i class="ph ph-megaphone"></i> Find Opportunities
+    </button>
+</a>
+                
+                <button class="nav-item"><i class="ph ph-user"></i> My Activity</button>
+                <button class="nav-item"><i class="ph ph-sliders"></i> Advanced Filters</button>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>Volunteer Dashboard</h1>
+                <div class="header-actions">
+                    <i class="ph ph-bell"></i>
+                    <i class="ph ph-magnifying-glass"></i>
+                    <img src="https://i.pravatar.cc/40" alt="Profile" class="profile-img">
+                </div>
+            </header>
+
+            <section class="welcome">
+                <h2>Welcome Back, <span id="user-name">Alex Carter</span>!</h2>
+                <p>Your current matching opportunities:</p>
+            </section>
+
+            <div class="dashboard-grid">
+                <div class="card smart-match">
+                    <div class="card-header">
+                        <h3>🔥 Recommended for You (Smart Match)</h3>
+                    </div>
+                    <div class="card-body">
+                        <h4>Teaching Kids 🎓 <small>(Based on your skills)</small></h4>
+                        <div class="meta">
+                            <span><i class="ph ph-map-pin"></i> Local Community Center</span>
+                            <span><i class="ph ph-calendar"></i> Flexible (1 hr/wk)</span>
+                        </div>
+                        <p>Help children with after-school tutoring.</p>
+                        <button class="btn-apply" onclick="applyNow('Teaching Kids')">Apply</button>
+                    </div>
+                </div>
+
+                <div class="card urgency-card">
+                    <div class="card-header">
+                        <h3>🔍 Filter by Urgency</h3>
+                    </div>
+                    <div class="filter-options">
+                        <label>Urgency Level: <strong>Low / Medium / High</strong></label>
+                        <div class="checkboxes">
+                            <label><input type="checkbox" checked> Food Drive</label>
+                            <label><input type="checkbox" checked> Clothes Donation</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card nearby">
+                    <div class="card-body">
+                        <h4>Food Drive (Nearby) 🍽️</h4>
+                        <div class="meta">
+                            <span><i class="ph ph-map-pin"></i> Delhi (Matches location)</span>
+                            <span><i class="ph ph-warning-circle"></i> High Priority</span>
+                        </div>
+                        <p>Help pack and distribute meal boxes.</p>
+                        <button class="btn-apply" onclick="applyNow('Food Drive')">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="vol-dashboad-script.js"></script>
+</body>
+</html>

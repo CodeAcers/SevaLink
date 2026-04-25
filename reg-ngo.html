@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SevaLink | NGO Registration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="reg-ngo-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <span>SevaLink</span>
+                </div>
+                <nav class="menu">
+                    <a href="#" class="menu-item active" id="nav-ngo">
+                        <i class="fas fa-university"></i> NGO Registration
+                    </a>
+                    <a href="#" class="menu-item" id="nav-opps">
+                        <i class="fas fa-bullhorn"></i> Find Opportunities
+                    </a>
+                    <a href="#" class="menu-item" id="nav-profile">
+                        <i class="far fa-user"></i> My Profile
+                    </a>
+                </nav>
+            </div>
+            <button class="logout-btn" onclick="handleLogout()">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="welcome">Welcome, <span class="user-name">Alex Carter</span></div>
+                <div class="header-actions">
+                    <button class="get-started">Get Started</button>
+                    <i class="fas fa-search icon-btn"></i>
+                    <div class="user-profile">
+                        <img src="https://i.pravatar.cc/100" alt="Avatar">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="notification">
+                        <i class="far fa-bell icon-btn"></i>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="form-container">
+                <h1>NGO Registration Form</h1>
+                
+                <form id="ngoForm" class="registration-form">
+                    <div class="form-column">
+                        <section class="form-section">
+                            <h3>Part 1: Name and Detail</h3>
+                            <div class="input-group">
+                                <i class="fas fa-building"></i>
+                                <input type="text" id="ngoName" placeholder="NGO Name" required>
+                            </div>
+                            <p class="sub-label">Contact Person Details</p>
+                            <div class="input-group">
+                                <i class="far fa-user"></i>
+                                <input type="text" id="contactName" placeholder="Name" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="far fa-envelope"></i>
+                                <input type="email" id="contactEmail" placeholder="Email" required>
+                            </div>
+                            <div class="input-group">
+                                <i class="fas fa-phone-alt"></i>
+                                <input type="tel" id="contactPhone" placeholder="Phone" required>
+                            </div>
+                        </section>
+
+                        <section class="form-section">
+                            <h3>Part 2: Location <i class="fas fa-map-marked-alt text-blue"></i></h3>
+                            <select class="custom-select" id="citySelect">
+                                <option value="">Searchable to Indian cities...</option>
+                                <option value="delhi">Delhi</option>
+                                <option value="mumbai">Mumbai</option>
+                                <option value="bangalore">Bangalore</option>
+                            </select>
+                            <input type="text" id="area" placeholder="Area" class="standard-input">
+                            <div class="map-placeholder">
+                                <p>Current Location (Optional Map)</p>
+                                <div class="map-box">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="form-column">
+                        <section class="form-section">
+                            <h3>Part 3: Problem Definition</h3>
+                            <input type="text" id="problemTitle" placeholder="Problem Title" class="standard-input">
+                            <textarea id="problemDesc" placeholder="Detailed view of problem (Description)"></textarea>
+                        </section>
+
+                        <section class="form-section">
+                            <h3>Part 4: Impact and Urgency</h3>
+                            <p class="sub-label">Number of People Affected</p>
+                            <input type="number" id="peopleAffected" placeholder="e.g. 500" class="standard-input">
+                            
+                            <p class="sub-label">Current Impact Level</p>
+                            <select class="custom-select" id="impactLevel">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High / Critical</option>
+                            </select>
+                        </section>
+                    </div>
+
+                    <div class="form-column">
+                        <section class="form-section">
+                            <h3>Part 5: Need on Skill Set</h3>
+                            <div class="skills-grid">
+                                <label><input type="checkbox" name="skill" value="medical"> Medical</label>
+                                <label><input type="checkbox" name="skill" value="education"> Education</label>
+                                <label><input type="checkbox" name="skill" value="tech"> Tech</label>
+                                <label><input type="checkbox" name="skill" value="logistics"> Logistics</label>
+                                <label><input type="checkbox" name="skill" value="legal"> Legal</label>
+                                <label><input type="checkbox" name="skill" value="other"> Other</label>
+                            </div>
+                        </section>
+
+                        <section class="form-section">
+                            <h3>Part 6: Project Logistics</h3>
+                            <div class="logistics-row">
+                                <div class="input-block">
+                                    <p class="sub-label">Deadline</p>
+                                    <input type="date" id="deadline" class="standard-input">
+                                </div>
+                                <div class="input-block">
+                                    <p class="sub-label">Estimated Cost</p>
+                                    <input type="text" id="cost" placeholder="₹" class="standard-input">
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="form-section submit-section">
+                            <h3>Part 7: Media Upload</h3>
+                            <button type="button" class="upload-btn ghost" onclick="triggerFile('media')">
+                                <i class="fas fa-cloud-upload-alt"></i> Upload Media (Images/Video)
+                            </button>
+                            
+                            <p class="sub-label">Part 8: Submit</p>
+                            <label class="confirm-label">
+                                <input type="checkbox" id="confirmData" required> "I confirm the information is correct"
+                            </label>
+                            
+                            <button type="button" class="upload-btn ghost secondary" onclick="triggerFile('proof')">
+                                <i class="fas fa-file-upload"></i> Upload Proof of NGO Status (Optional)
+                            </button>
+
+                            <button type="submit" class="register-btn">
+                                <i class="fas fa-user-plus"></i> Register NGO
+                            </button>
+                            <p class="footer-note">Registered as part of SevaLink NGO network.<br>Current location: Delhi.</p>
+                        </section>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <input type="file" id="mediaInput" style="display:none">
+    <input type="file" id="proofInput" style="display:none">
+
+    <script src="reg-ngo-script.js"></script>
+</body>
+</html>

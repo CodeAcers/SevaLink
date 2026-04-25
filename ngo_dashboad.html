@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SevaLink Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="ngo_dashboad_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+                <img src="./IMAGE/SevaLink.png" alt="SevaLink " class="brand-logo">
+            </div>
+            <span class="brand-name"></span>
+        </div>
+        <div class="header-right">
+            <span>Welcome, <strong>NGO Admin</strong></span>
+
+            <a href="reg-ngo.html" style="text-decoration: none;">
+    <button class="btn-get-started">Get Started</button>
+</a>
+            <!-- <button class="btn-get-started">Get Started</button> -->
+            <div class="avatar">👤</div>
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="nav-item active" onclick="setActive(this)">📊 Dashboard</div>
+            <div class="nav-item" id="postNeedBtn">📢 Post Need</div>
+             <a href="activity_ngo.html" class="nav-item">
+            📋 My Requests
+        </a>
+            <!-- <div class="nav-item" onclick="setActive(this)">📋 My Requests</div> -->
+        </aside>
+
+        <main class="content">
+            <h1 class="page-title">Dashboard Overview</h1>
+            
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon green">📢</div>
+                    <div>
+                        <p class="stat-label">Active Requests</p>
+                        <h2 id="activeCount">2</h2>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon blue">👥</div>
+                    <div>
+                        <p class="stat-label">Volunteers Applied</p>
+                        <h2>85</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-card">
+                <h3>Recent Needs</h3>
+                <div id="needsList">
+                    </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <h3>Edit Request Title</h3>
+            <input type="text" id="editInput">
+            <div class="modal-btns">
+                <button class="btn-cancel" onclick="closeModal()">Cancel</button>
+                <button class="btn-save" onclick="saveEdit()">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="ngo_dashboad_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SevaLink- Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="login-vol-style.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <p class="tagline">Together We Can Make Change</p>
+        
+        <form class="login-form" id="volLoginForm">
+    <h2 style="text-align: center; margin-bottom: 20px; font-family: 'Inter', sans-serif;">Volunteer Login</h2>
+    
+    <input type="email" id="email" placeholder="Personal Email Address" class="input-field" required>
+    <input type="password" id="password" placeholder="Password" class="input-field" required>
+    
+    <a href="vol-dashboad.html" style="text-decoration: none;">
+    <button type="button" class="login-btn">LOGIN</button>
+</a>
+    
+    <a href="#" class="forgot-link">Forgot Password ?</a>
+    
+    <div class="divider-line"></div>
+    
+    <p class="signup-text">Don’t have an account? <a href="#">Sign Up</a></p>
+    
+    <div class="login-as">
+        <span style="font-size: 13px;">Not a Volunteer? 
+            <a href="login-ngo.html" style="color: #3b82f6; text-decoration: none; font-weight: bold;">Login as NGO</a>
+        </span>
+    </div>
+</form>
+    </div>
+
+    <script src="login-script.js"></script>
+</body>
+</html>

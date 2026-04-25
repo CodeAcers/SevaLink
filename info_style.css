@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f7ff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1e3a5f;
+    line-height: 1.6;
+}
+
+.info-container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.info-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.info-header p {
+    font-size: 1.1rem;
+    color: #5a7fa1;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.info-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(33, 150, 243, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #e1efff;
+}
+
+.info-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 30px 60px rgba(33, 150, 243, 0.15);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.info-card h2 {
+    color: #2196F3;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.info-card ul {
+    text-align: left;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.info-card ul li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    color: #4a6681;
+}
+
+.info-card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #2196F3;
+    font-weight: bold;
+}
+
+.action-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.ngo-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.vol-btn {
+    background-color: #1e3a5f;
+    color: white;
+}
+
+.action-btn:hover {
+    opacity: 0.9;
+    filter: brightness(1.1);
+}
+
+.back-home {
+    display: inline-block;
+    margin-top: 40px;
+    color: #7ba6d5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-home:hover {
+    text-decoration: underline;
+}

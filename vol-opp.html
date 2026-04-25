@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SevaLink Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="vol-opp-style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-area">
+            <div class="logo-box"><i class="ph-bold ph-hand-heart"></i></div>
+            <span class="logo-text">SevaLink</span>
+        </div>
+        <div class="user-controls">
+            <span>Welcome, <strong>Alex Carter</strong></span>
+            <a href="reg-vol.html" style="text-decoration: none;">
+    <button class="btn-started">Get Started</button>
+</a>
+            <i class="ph ph-magnifying-glass"></i>
+            <img src="https://i.pravatar.cc/100?u=alex" alt="User" class="avatar">
+            <i class="ph ph-bell"></i>
+        </div>
+    </header>
+
+    <div class="layout-body">
+        <aside class="sidebar">
+            <nav class="nav-links">
+                <a href="#" class="active"><i class="ph-fill ph-squares-four"></i> Dashboard</a>
+                <a href="#"><i class="ph ph-megaphone"></i> Find Opportunities</a>
+                <a href="#"><i class="ph ph-notebook"></i> My Activity</a>
+                <div class="nav-bottom">
+                    <a href="#"><i class="ph ph-user"></i> My Profile</a>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="dashboard">
+            <section class="welcome-header">
+                <h1>Welcome Back, Alex Carter!</h1>
+                <p>Suggested Volunteer Opportunities based on your interests and skills:</p>
+            </section>
+
+            <div class="card-grid">
+                <div class="card glass">
+                    <div class="card-content">
+                        <h3>Food Pantry Support - High Priority 🍲</h3>
+                        <div class="details">
+                            <p><i class="ph-bold ph-map-pin"></i> <strong>Location:</strong> San Francisco</p>
+                            <p><i class="ph-bold ph-calendar"></i> Weekend of April 5-6</p>
+                            <p><i class="ph-bold ph-package"></i> <strong>Resources:</strong> Help pack meal boxes.</p>
+                        </div>
+                    </div>
+                    <button class="btn-view" onclick="viewDetails('Food Pantry')">[ View Opportunity ]</button>
+                </div>
+
+                <div class="card glass">
+                    <div class="card-content">
+                        <h3>Elderly Home Visits - Teaching/Company 📖</h3>
+                        <div class="details">
+                            <p><i class="ph-bold ph-map-pin"></i> <strong>Location:</strong> Local Community Center</p>
+                            <p><i class="ph-bold ph-calendar"></i> -</p>
+                            <p><i class="ph-bold ph-clock"></i> <strong>Schedule:</strong> Flexible (1 hr/wk).</p>
+                        </div>
+                    </div>
+                    <button class="btn-view" onclick="viewDetails('Elderly Care')">[ View Opportunity ]</button>
+                </div>
+
+                <div class="card glass">
+                    <div class="card-content">
+                        <h3>Environmental Cleanup - Medical Standby 🌿</h3>
+                        <div class="details">
+                            <p><i class="ph-bold ph-map-pin"></i> <strong>Location:</strong> Coastal Park</p>
+                            <p><i class="ph-bold ph-calendar"></i> May 12th</p>
+                            <p><i class="ph-bold ph-first-aid"></i> <strong>Impact Skills:</strong> First Aid</p>
+                        </div>
+                    </div>
+                    <button class="btn-view" onclick="viewDetails('Cleanup')">[ View Opportunity ]</button>
+                </div>
+            </div>
+            
+            <div class="community-section">
+                <h2>Community</h2>
+                <a href="#" class="show-more">Show More</a>
+            </div>
+        </main>
+    </div>
+    <script src="vol-opp-script.js"></script>
+</body>
+</html>
