@@ -9,7 +9,7 @@
 ---
 
 ### 🎥 **Demonstration & Links**
-* 🔗 **Video Demo:** [Watch the Walkthrough on Google Drive](https://drive.google.com/file/d/1DM4gFvXJTX6ZLC3DdiQFB9-xhC6OQ_v5/view?usp=drivesdk)
+* 🔗 **Video Demo:** [Watch the Walkthrough on Google Drive](https://drive.google.com/file/d/1t2MC_Y4PiUfY-xiaDBSa9jqsP_fwuxKv/view?usp=drivesdk)
 * 🔗 **Project Link:** [Access the SevaLink Prototype](https://codeacers.github.io/SevaLink/)
 
 ---
